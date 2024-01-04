@@ -62,7 +62,7 @@ loaded_model = joblib.load("model_rf.pkl")
 # TF-IDF
 from sklearn.feature_extraction.text import TfidfVectorizer
 
-data_clean = pd.read_csv("./preprocessed_indonesian_toxic_tweet.csv", encoding='latin-1')
+data_clean = pd.read_csv("./preprocessed_indonesian_hate_speech_tweet.csv", encoding='latin-1')
 
 tf = TfidfVectorizer()
 text_tf = tf.fit_transform(data_clean["Tweet"].astype('U'))
